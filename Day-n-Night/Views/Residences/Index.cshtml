@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Day_n_Night.Models.Residence>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Room.DefualtImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DefualtImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImageName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Open)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Close)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Room.DefualtImage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DefualtImage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Image)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImageName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Open)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Close)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ResID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ResID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ResID })
+        </td>
+    </tr>
+}
+
+</table>

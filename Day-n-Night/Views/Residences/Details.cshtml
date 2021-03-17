@@ -1,0 +1,74 @@
+﻿@model Day_n_Night.Models.Residence
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Residence</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.DefualtImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Room.DefualtImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DefualtImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DefualtImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Open)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Open)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Close)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Close)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ResID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
